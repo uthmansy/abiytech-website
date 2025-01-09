@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "inter", Helvetica, sans-serif;
+  font-size: calc(14px + 0.2vw);
+  /* line-height: 2rem; */
+  -webkit-font-smoothing: antialiased; /* For Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+  @apply text-gray-700 selection:bg-primary selection:text-accent;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+}
