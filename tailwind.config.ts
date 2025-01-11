@@ -21,6 +21,14 @@ export default {
       fontSize: {
         base: "calc(14px + 0.2vw)", // Custom base font size
       },
+      backgroundImage: {
+        "grid-lines":
+          "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "grid-small": "20px 20px",
+        "grid-large": "40px 40px",
+      },
     },
   },
   plugins: [],
