@@ -1,6 +1,6 @@
 "use client";
 import Header from "@/components/Pages/Header";
-import { LOGO } from "@/constants/IMAGES";
+import Hero from "@/components/Sections/Hero";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useLayoutEffect, useRef } from "react";
@@ -19,18 +19,14 @@ export default function Home() {
     })();
   }, []);
 
-  const elsRef = useRef<HTMLElement[]>([]);
-
-  const containerRef = useRef(null);
-
   useLayoutEffect(() => {
-    const els = gsap.utils.toArray(".els");
+    const hs1 = gsap.utils.toArray(".hs1");
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(els, {
-      xPercent: -100 * (els.length - 1),
+    gsap.to(hs1, {
+      xPercent: -100 * (hs1.length - 1),
       ease: "none",
       scrollTrigger: {
-        trigger: ".els-container",
+        trigger: ".hs1-container",
         pin: true,
         scrub: 1,
         end: "+=3000",
@@ -40,11 +36,12 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <div className="w-[100vw] overflow-x-hidden">
-        <div className="els-container flex w-[300vw]">
-          <Header />
-          <Header />
-          <Header />
+        <div className="hs1-container flex w-[300vw]">
+          <Hero />
+          <Hero />
+          <Hero />
         </div>
       </div>
       <div>
